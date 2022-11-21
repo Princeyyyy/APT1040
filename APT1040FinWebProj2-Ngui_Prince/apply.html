@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Apply</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/apply.css">
+<!--===============================================================================================-->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+
+	<div class="contact1">
+		<div class="container-contact1">
+			<div class="contact1-pic js-tilt" data-tilt>
+				<img src="images/image.png" alt="Logo">
+			</div>
+
+			<form class="contact1-form validate-form">
+				<span class="contact1-form-title">
+					Apply Now
+				</span>
+
+				<span class="title">
+					First Name:
+				</span>
+				<div class="wrap-input1 validate-input" data-validate = "First Name is required">
+					<input class="input1" type="text" name="firstname" placeholder="First Name">
+					<span class="shadow-input1"></span>
+				</div>
+
+				<span class="title">
+					Last Name:
+				</span>
+				<div class="wrap-input1 validate-input" data-validate = "Last Name is required">
+					<input class="input1" type="text" name="lastname" placeholder="Last Name">
+					<span class="shadow-input1"></span>
+				</div>
+
+				<span class="title">
+					Email:
+				</span>
+				<div class="wrap-input1 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+					<input class="input1" type="text" name="email" placeholder="Email">
+					<span class="shadow-input1"></span>
+				</div>
+
+				<span class="title">
+					Phone Number:
+				</span>
+				<div class="wrap-input1 validate-input" data-validate = "Phone Number is required">
+					<input class="input1" type="text" name="phoneno" placeholder="Phone Number">
+					<span class="shadow-input1"></span>
+				</div>
+
+				<span class="title">
+					Pick a course:
+				</span>
+				<div class="wrap-input1 validate-input" data-validate = "A chosen course is required">
+					<select class="input101" aria-placeholder="Courses" name="courses" id="courses">
+						<option value="default">Choose one:</option>
+						<option value="volvo">Course 1</option>
+						<option value="saab">Course 2</option>
+						<option value="fiat">Course 3</option>
+						<option value="audi">Coure 4</option>
+					</select>
+					<span class="shadow-input1"></span>
+				</div>
+
+				<div class="container-contact1-form-btn">
+					<button class="contact1-form-btn">
+						<span>
+							Finish Application
+							<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+						</span>
+					</button>
+				</div>
+
+				<div class="text-center">
+                    <a class="txt2" href="index.html">
+						Back
+						<i class="fa fa-long-arrow-left m-l-5" aria-hidden="true"></i>
+					</a>
+                </div>
+			</form>
+		</div>
+	</div>
+
+
+
+
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/tilt/tilt.jquery.min.js"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+<!--===============================================================================================-->
+	<script src="js/apply.js"></script>
+
+</body>
+</html>
