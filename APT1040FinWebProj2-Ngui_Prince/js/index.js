@@ -63,3 +63,43 @@ $(document).ready(function() {
         }
     });
 });
+
+function sendMail() {
+  var params = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    message: document.getElementById("message").value,
+  };
+
+  const serviceID = "service_2rxllsv";
+  const templateID = "template_sg2becq";
+
+    emailjs.send(serviceID, templateID, params)
+    .then(res=>{
+        console.log(res);
+        sendSecondMail();
+    })
+    .catch(err=>console.log(err));
+}
+
+function sendSecondMail() {
+  var params = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    subject: document.getElementById("subject").value,
+    message: document.getElementById("message").value,
+  };
+
+  const serviceID = "service_2rxllsv";
+  const templateID = "template_388brfd";
+
+    emailjs.send(serviceID, templateID, params)
+    .then(res=>{
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("subject").value = "";
+        document.getElementById("message").value = "";
+        console.log(res);
+    })
+    .catch(err=>console.log(err));
+}

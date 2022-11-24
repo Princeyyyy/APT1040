@@ -131,7 +131,7 @@
                             <i class="fa fa-envelope"></i>
                             <div class="info">
                                 <div class="head">Email</div>
-                                <div class="sub-title">destinyuniversity@gmail.com</div>
+                                <div class="sub-title">destinyuniversity2022@gmail.com</div>
                             </div>
                         </div>
                     </div>
@@ -141,20 +141,20 @@
                     <form action="#">
                         <div class="fields">
                             <div class="field name">
-                                <input type="text" placeholder="Name" required>
+                                <input id="name" type="text" placeholder="Name" aria-required="true">
                             </div>
                             <div class="field email">
-                                <input type="email" placeholder="Email" required>
+                                <input id="email" type="email" placeholder="Email" aria-required="true">
                             </div>
                         </div>
                         <div class="field">
-                            <input type="text" placeholder="Subject" required>
+                            <input id="subject" type="text" placeholder="Subject" aria-required="true">
                         </div>
                         <div class="field textarea">
-                            <textarea cols="30" rows="10" placeholder="Message.." required></textarea>
+                            <textarea id="message" cols="30" rows="10" placeholder="Message.." aria-required="true"></textarea>
                         </div>
                         <div class="button">
-                            <button type="submit">Send message</button>
+                            <button type="submit" id="send">Send message</button>
                         </div>
                     </form>
                 </div>
@@ -168,5 +168,24 @@
     
     <!-- JavaScript Scripts: -->
     <script src="js/index.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("QG1boqxDzZt2Stw3n");
+      })();
+    </script>
+
+    <script>
+        var btn = document.getElementById("send");
+        btn.addEventListener('click', event => {
+            if (name=="" || email=="" || subject=="" || message=="") {
+                alert("Kindly ensure all fields are filled before sending message");
+            } else {
+                sendMail();
+                alert("Thank you for your response. You will receive an email shortly");
+            }
+        });
+    </script>
 </body>
 </html>
