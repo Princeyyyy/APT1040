@@ -20,6 +20,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
 
+    <!-- JavaScript Scripts: -->
+    <script src="js/index.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("QG1boqxDzZt2Stw3n");
+      })();
+    </script>
+
     <!-- Favicon: -->
     <link rel="shortcut icon" href="images/image.png" type="image/x-icon">
 </head>
@@ -138,7 +148,7 @@
                 </div>
                 <div class="column right">
                     <div class="text">Message us</div>
-                    <form name="myForm" method="post" required>
+                    <form name="myForm" onsubmit="return validateForm()" method="post" required>
                         <div class="fields">
                             <div class="field name">
                                 <input id="fullname" type="text" placeholder="Name" aria-required="true">
@@ -165,20 +175,34 @@
     <footer>
         <span>Created By <a href="https://github.com/Princeyyyy" target="_blank">Prince Mumo</a> | <span class="fa fa-copyright"></span> 2022 All rights reserved.</span>
     </footer>
-    
-    <!-- JavaScript Scripts: -->
-    <script src="js/index.js"></script>
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script type="text/javascript">
-      (function () {
-        emailjs.init("QG1boqxDzZt2Stw3n");
-      })();
+    <!-- <script>
+    var btn = document.getElementById("send");
+    btn.addEventListener("click", function() {
 
-      var btn = document.getElementById("send");
-      btn.addEventListener("click", function() {
-        validateForm();
+    var name = document.getElementById("fullname").value;
+	var email = document.getElementById("email").value;
+	var subject = document.getElementById("subject").value;
+	var message = document.getElementById("message").value;
+	
+    if (name == "" || email == "" || subject == "" || message == "") {
+        alert("Kindly ensure all fields are filled before sending message");
+    } else {
+        var params = {
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            message: document.getElementById("message").value,
+        };
+        const serviceID = "service_2rxllsv";
+        const templateID = "template_sg2becq";
+        
+        emailjs.send(serviceID, templateID, params)
+            .then(res => {
+                alert("Thank you");
+            })
+            .catch(err => console.log(err));
+        }
     });
-    </script>
+    </script> -->
 </body>
 </html>
