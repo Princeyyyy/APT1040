@@ -70,36 +70,10 @@ function validateForm(){
 	var subject = document.getElementById("subject").value;
 	var message = document.getElementById("message").value;
 	
-    if (name == "" || email == "" || subject == "" || message == "") {
-        alert("Kindly ensure all fields are filled before sending message");
-    } else {
-        var params = {
-            name: document.getElementById("name").value,
-            email: document.getElementById("email").value,
-            message: document.getElementById("message").value,
-        };
-        const serviceID = "service_2rxllsv";
-        const templateID = "template_sg2becq";
-        
-        emailjs.send(serviceID, templateID, params)
-            .then(res => {
-                sendMail();
-            })
-            .catch(err => console.log(err));
-    }
-}
-
-function validateForm(){
-	var name = document.getElementById("fullname").value;
-	var email = document.getElementById("email").value;
-	var subject = document.getElementById("subject").value;
-	var message = document.getElementById("message").value;
-	
 	if (name == "" || email == "" || subject == "" || message == "") {
 		alert("Kindly ensure all fields are filled before sending message");
-	} else {
-		alert("Thank you for your message. You will receive an email shortly");
-		sendMail();
+    } else {
+        sendMail();
 	}
 }
 
@@ -114,9 +88,11 @@ function sendMail() {
   const templateID = "template_sg2becq";
 
     emailjs.send(serviceID, templateID, params)
-    .then(res=>{
-        sendSecondMail();
-    })
+        .then(res => {
+            console.log(res);
+            alert("Thank you for your message. You will receive an email shortly");
+            sendSecondMail();
+        })
     .catch(err=>console.log(err));
 }
 
@@ -133,10 +109,6 @@ function sendSecondMail() {
 
     emailjs.send(serviceID, templateID, params)
     .then(res=>{
-        document.getElementById("name").value = "";
-        document.getElementById("email").value = "";
-        document.getElementById("subject").value = "";
-        document.getElementById("message").value = "";
         console.log(res);
     })
     .catch(err=>console.log(err));
