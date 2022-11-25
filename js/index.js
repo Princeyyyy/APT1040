@@ -107,10 +107,6 @@ function sendSecondMail() {
 
     emailjs.send(serviceID, templateID, params)
     .then(res=>{
-        document.getElementById("name").value = "";
-        document.getElementById("email").value = "";
-        document.getElementById("subject").value = "";
-        document.getElementById("message").value = "";
         console.log(res);
     })
     .catch(err=>console.log(err));
