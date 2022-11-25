@@ -64,6 +64,19 @@ $(document).ready(function() {
     });
 });
 
+function validateForm(){
+	var name = document.getElementById("fullname").value;
+	var email = document.getElementById("email").value;
+	var subject = document.getElementById("subject").value;
+	var message = document.getElementById("message").value;
+	
+    if (name == "" || email == "" || subject == "" || message == "") {
+        alert("Kindly ensure all fields are filled before sending message");
+    } else {
+        sendMail();
+    }
+}
+
 function sendMail() {
   var params = {
     name: document.getElementById("name").value,
@@ -76,7 +89,6 @@ function sendMail() {
 
     emailjs.send(serviceID, templateID, params)
     .then(res=>{
-        console.log(res);
         sendSecondMail();
     })
     .catch(err=>console.log(err));

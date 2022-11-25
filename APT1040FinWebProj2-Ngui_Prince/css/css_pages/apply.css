@@ -1,24 +1,5 @@
 /*[ Font: ]*/
-
-@font-face {
-  font-family: Montserrat-Regular;
-  src: url('../fonts/montserrat/Montserrat-Regular.ttf'); 
-}
-
-@font-face {
-  font-family: Montserrat-Bold;
-  src: url('../fonts/montserrat/Montserrat-Bold.ttf'); 
-}
-
-@font-face {
-  font-family: Montserrat-ExtraBold;
-  src: url('../fonts/montserrat/Montserrat-ExtraBold.ttf'); 
-}
-
-@font-face {
-  font-family: Montserrat-Medium;
-  src: url('../fonts/montserrat/Montserrat-Medium.ttf'); 
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
 
 
@@ -32,12 +13,11 @@
 
 body, html {
 	height: 100%;
-	font-family: Montserrat-Regular, sans-serif;
+	font-family: 'Montserrat', sans-serif;
 }
 
 /*---------------------------------------------*/
 a {
-	font-family: Montserrat-Regular;
 	font-size: 14px;
 	line-height: 1.7;
 	color: #666666;
@@ -63,7 +43,6 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 p {
-	font-family: Montserrat-Regular;
 	font-size: 14px;
 	line-height: 1.7;
 	color: #666666;
@@ -116,15 +95,11 @@ iframe {
 	border: none !important;
 }
 
-
-
-
 /*[ Contact 1: ]*/
 
 .contact1 {
   width: 100%;
   min-height: 100%;
-  padding: 15px;
 
   background: #009bff;
   background: -webkit-linear-gradient(left, #0072ff, #00c6ff);
@@ -177,7 +152,6 @@ iframe {
 
 .contact1-form-title {
   display: block;
-  font-family: Montserrat-ExtraBold;
   font-size: 24px;
   color: black;
   line-height: 1.2;
@@ -207,6 +181,8 @@ textarea.input1 + .shadow-input1 {
 .title{
   padding-right: 20px;
   padding-bottom: 10px;
+  color: black;
+  font-weight: 600;
 }
 
 /*---------------------------------------------*/
@@ -221,14 +197,12 @@ textarea.input1 + .shadow-input1 {
   display: block;
   width: 100%;
   background: #e6e6e6;
-  font-family: Montserrat-Regular;
   font-size: 15px;
   line-height: 1.5;
   color: #666666;
 }
 
 .input101 {
-    font-family: Montserrat-Regular;
     font-size: 15px;
     line-height: 1.5;
     color: #666666;
@@ -289,7 +263,6 @@ textarea.input1 + .shadow-input1 {
   height: 50px;
   border-radius: 25px;
   background: #57b846;
-  font-family: Montserrat-Bold;
   font-size: 15px;
   line-height: 1.5;
   color: #fff;

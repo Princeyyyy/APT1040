@@ -1,3 +1,4 @@
+/*[ Font: ]*/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
 body {
@@ -171,7 +172,9 @@ section .title::after {
 
 footer {
     margin-top: 20px;
-    background: #fff;
+	background: -webkit-linear-gradient(left, #fff, #507DBC);
+	background: -o-linear-gradient(left, #fff, #507DBC);
+	background: linear-gradient(to right, #fff, #507DBC);
     padding: 15px 23px;
     color: black;
     text-align: center;

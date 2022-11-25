@@ -111,7 +111,7 @@
             <div class="contact-content">
                 <div class="column left">
                     <div class="text">Get in Touch</div>
-                    <p>Feel free to get in touch with me through the below means. Looking foward to hearing from you.</p>
+                    <p>Feel free to get in touch with us through the below means. Looking foward to hearing from you.</p>
                     <div class="icons">
                         <div class="row">
                             <i class="fa fa-user"></i>
@@ -138,10 +138,10 @@
                 </div>
                 <div class="column right">
                     <div class="text">Message us</div>
-                    <form action="#">
+                    <form name="myForm" onsubmit="return validateForm()" method="post" required>
                         <div class="fields">
                             <div class="field name">
-                                <input id="name" type="text" placeholder="Name" aria-required="true">
+                                <input id="fullname" type="text" placeholder="Name" aria-required="true">
                             </div>
                             <div class="field email">
                                 <input id="email" type="email" placeholder="Email" aria-required="true">
@@ -174,18 +174,6 @@
       (function () {
         emailjs.init("QG1boqxDzZt2Stw3n");
       })();
-    </script>
-
-    <script>
-        var btn = document.getElementById("send");
-        btn.addEventListener('click', event => {
-            if (name=="" || email=="" || subject=="" || message=="") {
-                alert("Kindly ensure all fields are filled before sending message");
-            } else {
-                sendMail();
-                alert("Thank you for your response. You will receive an email shortly");
-            }
-        });
     </script>
 </body>
 </html>
