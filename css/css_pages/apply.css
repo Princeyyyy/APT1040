@@ -119,6 +119,7 @@ iframe {
 
 .container-contact1 {
   width: 1163px;
+  height: 700px;
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
@@ -132,7 +133,7 @@ iframe {
   justify-content: space-between;
   align-items: center;
 
-  padding: 90px 130px 88px 148px;
+  padding: 80px 130px 80px 148px;
 }
 
 /*[  ]*/

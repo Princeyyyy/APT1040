@@ -51,7 +51,7 @@ body {
     filter: brightness(90%);
 }
 
-/*Car Section Styling:*/
+/*Card Section Styling:*/
 section .title {
     position: relative;
     text-align: center;
@@ -163,8 +163,8 @@ section .title::after {
 }
 
 .card .card__info a:hover {
-    color: #507DBC;
-    background: none;
+    color: #fff;
+    background: black;
     text-decoration: none;
 }
 
