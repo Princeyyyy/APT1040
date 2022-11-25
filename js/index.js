@@ -74,15 +74,18 @@ function validateForm(){
 		alert("Kindly ensure all fields are filled before sending message");
     } else {
         sendMail();
+        alert("Thank you for your message. You will receive an email shortly");
+        sendSecondMail();
 	}
 }
 
 function sendMail() {
-  var params = {
-    name: document.getElementById("name").value,
-    email: document.getElementById("email").value,
-    message: document.getElementById("message").value,
-  };
+    var params = {
+        name: document.getElementById("fullname").value,
+        email: document.getElementById("email").value,
+        subject: document.getElementById("subject").value,
+        message: document.getElementById("message").value,
+    };
 
   const serviceID = "service_2rxllsv";
   const templateID = "template_sg2becq";
@@ -90,18 +93,16 @@ function sendMail() {
     emailjs.send(serviceID, templateID, params)
         .then(res => {
             console.log(res);
-            alert("Thank you for your message. You will receive an email shortly");
-            sendSecondMail();
         })
     .catch(err=>console.log(err));
 }
 
 function sendSecondMail() {
-  var params = {
-    name: document.getElementById("name").value,
-    email: document.getElementById("email").value,
-    subject: document.getElementById("subject").value,
-    message: document.getElementById("message").value,
+    var params = {
+        name: document.getElementById("fullname").value,
+        email: document.getElementById("email").value,
+        subject: document.getElementById("subject").value,
+        message: document.getElementById("message").value,
   };
 
   const serviceID = "service_2rxllsv";
