@@ -98,7 +98,6 @@ section .title::after {
 .card{
     border-radius: 25px;
     box-shadow: 10px 10px 5px lightblue;
-	width: 200px;
 }
 
 .cards * {
