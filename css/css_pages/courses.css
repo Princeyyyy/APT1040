@@ -94,7 +94,6 @@ section .title::after {
     justify-content: space-between;
     grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
     grid-auto-rows: auto;
-    gap: 10px;
     font-family: 'Montserrat', sans-serif;
 }
 
