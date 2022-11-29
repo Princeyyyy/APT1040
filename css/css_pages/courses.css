@@ -170,6 +170,8 @@ section .title::after {
     color: #fff;
     background: black;
     text-decoration: none;
+	border-radius: 6px;
+    border: 2px solid black;
 }
 
 /* Footer Section Styling: */
