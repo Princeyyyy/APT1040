@@ -93,6 +93,7 @@ section .title::after {
     grid-auto-rows: auto;
     gap: 20px;
     font-family: 'Montserrat', sans-serif;
+	justify-content: space-between;
 }
 
 .card{
