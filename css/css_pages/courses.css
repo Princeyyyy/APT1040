@@ -87,13 +87,13 @@ section .title::after {
 
 .cards {
     margin: 0 auto;
-    display: grid;
+    display: flex;
 	flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
     grid-template-columns: 60px 60px;
-	grid-column-gap: 50px;
-    grid-auto-rows: 3;
+	grid-column-gap: 20px;
+    grid-auto-rows: auto;
 	gap: 20px;
     font-family: 'Montserrat', sans-serif;
 }
