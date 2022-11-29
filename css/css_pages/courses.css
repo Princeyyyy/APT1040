@@ -93,6 +93,7 @@ section .title::after {
     align-items: center;
     justify-content: space-evenly;
     grid-template-columns: 60px 60px;
+	grid-column-gap: 50px;
     grid-auto-rows: 3;
 	gap: 20px;
     font-family: 'Montserrat', sans-serif;
