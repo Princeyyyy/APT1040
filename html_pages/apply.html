@@ -21,6 +21,16 @@
 	<link rel="stylesheet" type="text/css" href="../css/css_pages/apply.css">
 <!--===============================================================================================-->
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!--===============================================================================================-->
+	<script src="../js/js_pages/apply.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("4odtrCq1u_Xe9aVuE");
+      })();
+    </script>
 </head>
 <body>
 	<div class="contact1">
@@ -29,63 +39,57 @@
 				<img src="../images/image.png" alt="Logo">
 			</div>
 
-			<form class="contact1-form validate-form">
+			<form class="contact1-form validate-form" onsubmit="return validateApplication()" required>
 				<span class="contact1-form-title">
 					Apply Now
 				</span>
 
 				<span class="title">
-					First Name:
+					Name:
 				</span>
-				<div class="wrap-input1 validate-input" data-validate = "First Name is required">
-					<input class="input1" type="text" name="firstname" placeholder="First Name">
-					<span class="shadow-input1"></span>
-				</div>
-
-				<span class="title">
-					Last Name:
-				</span>
-				<div class="wrap-input1 validate-input" data-validate = "Last Name is required">
-					<input class="input1" type="text" name="lastname" placeholder="Last Name">
+				<div class="wrap-input1 validate-input">
+					<input class="input1" type="text" placeholder="Name" id="apply_name">
 					<span class="shadow-input1"></span>
 				</div>
 
 				<span class="title">
 					Email:
 				</span>
-				<div class="wrap-input1 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-					<input class="input1" type="text" name="email" placeholder="Email">
+				<div class="wrap-input1 validate-input">
+					<input class="input1" type="text" placeholder="Email" id="apply_email">
 					<span class="shadow-input1"></span>
 				</div>
 
 				<span class="title">
 					Phone Number:
 				</span>
-				<div class="wrap-input1 validate-input" data-validate = "Phone Number is required">
-					<input class="input1" type="text" name="phoneno" placeholder="Phone Number">
+				<div class="wrap-input1 validate-input">
+					<input class="input1" type="text" placeholder="Phone Number" id="apply_no">
 					<span class="shadow-input1"></span>
 				</div>
 
 				<span class="title">
 					Pick a course:
 				</span>
-				<div class="wrap-input1 validate-input" data-validate = "A chosen course is required">
-					<select class="input101" aria-placeholder="Courses" name="courses" id="courses">
-						<option value="default">Choose one:</option>
-						<option value="volvo">Course 1</option>
-						<option value="saab">Course 2</option>
-						<option value="fiat">Course 3</option>
-						<option value="audi">Coure 4</option>
-						<option value="audi">Coure 5</option>
-						<option value="audi">Coure 6</option>
-						<option value="audi">Coure 7</option>
-						<option value="audi">Coure 8</option>
+				<div class="wrap-input1 validate-input">
+					<select class="input101" aria-placeholder="Degrees" id="apply_degree">
+						<option value="default" selected>Choose one:</option>
+						<option value="accounting">Bachelor of Science in Accounting</option>
+						<option value="hotel_restaurant_management">Bachelor of Science in Hotel and Restaurant Management</option>
+						<option value="international_relations">Bachelor of Arts in International Relations</option>
+						<option value="psychology">Bachelor of Arts in Psychology</option>
+						<option value="information_systems_technology">Bachelor of Science in Information Systems & Technology</option>
+						<option value="software_engneering">Bachelor of Science in Software Engineering</option>
+						<option value="applied_biochemistry">Bachelor of Science in Applied Biochemistry</option>
+						<option value="animation">Bachelor of Arts in Animation</option>
+						<option value="film_production">Bachelor of Arts in Film Production and Directing</option>
+						<option value="journalism">Bachelor of Arts in Journalism</option>
 					</select>
 					<span class="shadow-input1"></span>
 				</div>
 
 				<div class="container-contact1-form-btn">
-					<button class="contact1-form-btn">
+					<button class="contact1-form-btn" type="submit">
 						<span>
 							Finish Application
 							<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
@@ -94,8 +98,15 @@
 				</div>
 
 				<div class="text-center">
-                    <a class="txt2" onclick="history.back()">
-						Back
+                    <a class="txt2" href="../index.html">
+						Back to Index
+						<i class="fa fa-long-arrow-left m-l-5" aria-hidden="true"></i>
+					</a>
+                </div>
+
+				<div class="text-center">
+                    <a class="txt2" href="../html_pages/courses.html">
+						Back to Courses
 						<i class="fa fa-long-arrow-left m-l-5" aria-hidden="true"></i>
 					</a>
                 </div>
@@ -117,8 +128,6 @@
 			scale: 1.1
 		})
 	</script>
-<!--===============================================================================================-->
-	<script src="../js/js_pages/apply.js"></script>
 
 </body>
 </html>
