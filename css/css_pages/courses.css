@@ -80,6 +80,9 @@ section .title::after {
     padding: 0 5px;
     transform: translateX(-50%);
 }
+.courses{
+    margin-top: 50px;
+}
 
 .courses .title::after {
     content: "What We Offer";
@@ -124,6 +127,11 @@ section .title::after {
     background: #fff;
 }
 
+.card__content h1 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
 .card__content > p:first-of-type {
     margin-top: 0;
 }
@@ -136,6 +144,7 @@ section .title::after {
     padding: 15px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     color: #fff;
     font-size: 0.8em;
 }
@@ -143,15 +152,6 @@ section .title::after {
 .card__info i {
     font-size: 0.9em;
     margin-right: 8px;
-}
-
-.card__link {
-    color: #64968c;
-    text-decoration: none;
-}
-
-.card__link:hover {
-    text-decoration: underline;
 }
 
 .card .card__info a {
@@ -162,7 +162,21 @@ section .title::after {
     padding: 10px 30px;
     margin-top: 20px;
     border-radius: 6px;
+    color: #fff;
     border: 2px solid #DC8336;
+    transition: all 0.3s ease;
+}
+
+.card .card__info .download a {
+    display: inline-block;
+    background: blue;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    color: #fff;
+    border: 2px solid blue;
     transition: all 0.3s ease;
 }
 

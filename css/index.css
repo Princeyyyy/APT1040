@@ -31,11 +31,6 @@ html {
     transform: translateX(-50%);
 }
 
-.bullets{
-    font-size: 2rem;
-    line-height: normal;
-}
-
 section {
     padding: 100px 0;
 }
@@ -224,6 +219,25 @@ section .title::after {
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 10px;
+}
+
+.contact .contact-content .left a {
+    display: inline-block;
+    background: #DC8336;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 10px;
+    border-radius: 6px;
+    border: 2px solid #DC8336;
+    transition: all 0.3s ease;
+}
+
+.contact .contact-content .left a:hover {
+    color: #DC8336;
+    background: none;
+    text-decoration: none;
 }
 
 .contact .contact-content .left p {
