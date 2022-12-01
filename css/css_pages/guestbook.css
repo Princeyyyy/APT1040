@@ -54,7 +54,7 @@ section .title::after {
 
 /* Design Summary */
 .courses{
-    margin-top: -50px;
+    margin-top: -80px;
 }
 
 .card__info {
@@ -84,6 +84,45 @@ section .title::after {
     transition: all 0.3s ease;
 }
 
+.courses .card__info .download a {
+    display: inline-block;
+    background: blue;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    color: #fff;
+    border: 2px solid blue;
+    transition: all 0.3s ease;
+}
+
+.courses .card__info .hosted a {
+    display: inline-block;
+    background: #507DBC;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    color: #fff;
+    border: 2px solid #507DBC;
+    transition: all 0.3s ease;
+}
+
+.courses .card__info .index a {
+    display: inline-block;
+    background: blue;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    color: #fff;
+    border: 2px solid blue;
+    transition: all 0.3s ease;
+}
+
 .courses .card__info a:hover {
     color: #fff;
     background: black;
@@ -94,7 +133,7 @@ section .title::after {
 
 /* Contact Section Styling: */
 .contact{
-    margin-top: -250px;
+    margin-top: -200px;
     margin-bottom: -50px;
 }
 
