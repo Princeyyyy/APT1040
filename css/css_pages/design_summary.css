@@ -65,7 +65,7 @@ section .title::after {
 }
 
 .about .title::after {
-    content: "Who I Used";
+    content: "What I Used";
 }
 
 .about .about-content .left {

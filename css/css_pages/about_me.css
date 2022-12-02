@@ -234,6 +234,10 @@ section .title::after {
 	padding: 2px;
 	transition: .3s;
 }
+
+.gallery img {
+    border-radius: 6px;
+}
 	
 .gallery:hover .gallery__image {
     filter: grayscale(1);
@@ -269,6 +273,7 @@ section .title::after {
     transform: scale(1.1);
 }
 .courses {
+    margin-left: 50px;
     margin-bottom: -70px;
 }
 	
