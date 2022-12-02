@@ -51,7 +51,7 @@ body {
     filter: brightness(90%);
 }
 
-/*Car Section Styling:*/
+/*Card Section Styling:*/
 section .title {
     position: relative;
     text-align: center;
@@ -80,6 +80,9 @@ section .title::after {
     padding: 0 5px;
     transform: translateX(-50%);
 }
+.courses{
+    margin-top: 50px;
+}
 
 .courses .title::after {
     content: "What We Offer";
@@ -87,17 +90,21 @@ section .title::after {
 
 .cards {
     margin: 0 auto;
-    max-width: 1000px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+    display: flex;
+	flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    grid-template-columns: 60px 60px;
+	grid-column-gap: 20px;
     grid-auto-rows: auto;
-    gap: 20px;
+	gap: 20px;
     font-family: 'Montserrat', sans-serif;
 }
 
 .card{
     border-radius: 25px;
     box-shadow: 10px 10px 5px lightblue;
+	width: 400px;
 }
 
 .cards * {
@@ -120,6 +127,11 @@ section .title::after {
     background: #fff;
 }
 
+.card__content h1 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
 .card__content > p:first-of-type {
     margin-top: 0;
 }
@@ -132,6 +144,7 @@ section .title::after {
     padding: 15px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     color: #fff;
     font-size: 0.8em;
 }
@@ -139,15 +152,6 @@ section .title::after {
 .card__info i {
     font-size: 0.9em;
     margin-right: 8px;
-}
-
-.card__link {
-    color: #64968c;
-    text-decoration: none;
-}
-
-.card__link:hover {
-    text-decoration: underline;
 }
 
 .card .card__info a {
@@ -158,14 +162,30 @@ section .title::after {
     padding: 10px 30px;
     margin-top: 20px;
     border-radius: 6px;
+    color: #fff;
     border: 2px solid #DC8336;
     transition: all 0.3s ease;
 }
 
+.card .card__info .download a {
+    display: inline-block;
+    background: blue;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    color: #fff;
+    border: 2px solid blue;
+    transition: all 0.3s ease;
+}
+
 .card .card__info a:hover {
-    color: #507DBC;
-    background: none;
+    color: #fff;
+    background: black;
     text-decoration: none;
+	border-radius: 6px;
+    border: 2px solid black;
 }
 
 /* Footer Section Styling: */

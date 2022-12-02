@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+/*General Styling:*/
+html {
+    scroll-behavior: smooth;
+}
+
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*Section One Styling:*/
+section {
+    padding: 100px 0;
+}
+
+.max-width {
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+/*Section Two Styling:*/
+section .title {
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+}
+
+section .title::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+
+section .title::after {
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    font-size: 20px;
+    color: blue;
+    padding: 0 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+
+.about .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Tools Section Styling: */
+.about{
+    margin-top: -200px;
+}
+
+.about .title::after {
+    content: "What I Used";
+}
+
+.about .about-content .left {
+    width: 45%;
+}
+
+.about .about-content .left img {
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.about .about-content .right {
+    width: 55%;
+}
+
+.about .about-content .right .text {
+    font-size: 27px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.about .about-content .right .text span {
+    color: #0310ff;
+}
+
+.about .about-content .right p {
+    text-align: justify;
+}
+
+.about .about-content .right a {
+    display: inline-block;
+    background: #0310ff;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid #0310ff;
+    transition: all 0.3s ease;
+}
+
+.about .about-content .right a:hover {
+    color: #0310ff;
+    background: none;
+    text-decoration: none;
+}
+
+/* Design Summary */
+.courses{
+    margin-top: -70px;
+}
+
+.card__info {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    font-size: 0.8em;
+}
+
+.card__info i {
+    font-size: 0.9em;
+    margin-right: 8px;
+}
+
+.courses .card__info a {
+    display: inline-block;
+    background: #DC8336;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    color: #fff;
+    border: 2px solid #DC8336;
+    transition: all 0.3s ease;
+}
+
+.courses .card__info .download a {
+    display: inline-block;
+    background: blue;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    color: #fff;
+    border: 2px solid blue;
+    transition: all 0.3s ease;
+}
+
+.courses .card__info .hosted a {
+    display: inline-block;
+    background: #507DBC;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    color: #fff;
+    border: 2px solid #507DBC;
+    transition: all 0.3s ease;
+}
+
+.courses .card__info .index a {
+    display: inline-block;
+    background: blue;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    color: #fff;
+    border: 2px solid blue;
+    transition: all 0.3s ease;
+}
+
+.courses .card__info a:hover {
+    color: #fff;
+    background: black;
+    text-decoration: none;
+	border-radius: 6px;
+    border: 2px solid black;
+}
+
+
+/* Courses Section Styling: */
+.course{
+    background: #507DBC;
+}
+
+.course .title,.course .text, .course p, .course a{
+    color: white;
+}
+
+.course .course-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.course .course-content .left {
+    width: 45%;
+}
+
+.course .course-content .left img {
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.course .course-content .right {
+    width: 55%;
+}
+
+.course .course-content .right .text {
+    font-size: 27px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.course .course-content .right .text span {
+    color: #0310ff;
+}
+
+.course .course-content .right p {
+    text-align: justify;
+}
+
+.course .course-content .right a {
+    display: inline-block;
+    background: #DC8336;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid #DC8336;
+    transition: all 0.3s ease;
+}
+
+.course .course-content .right a:hover {
+    color: #fff;
+    background: none;
+    text-decoration: none;
+}
+
+/* Footer Section Styling: */
+
+footer {
+    background: #507DBC;
+    padding: 15px 23px;
+    color: black;
+    text-align: center;
+}
+
+footer span a {
+    color: white;
+    text-decoration: none;
+}
+
+footer span a:hover {
+    color: black;
+    text-decoration: underline;
+}

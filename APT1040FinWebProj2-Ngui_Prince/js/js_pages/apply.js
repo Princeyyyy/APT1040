@@ -1,57 +1,52 @@
-(function ($) {
-    "use strict";
+function validateApplication(){
+	var name = document.getElementById("apply_name").value;
+	var email = document.getElementById("apply_email").value;
+	var phoneno = document.getElementById("apply_no").value;
 
-    /*[ Validate ]*/
-    var first_name = $('.validate-input input[name="firstname"]');
-    var last_name = $('.validate-input input[name="lastname"]');
-    var email = $('.validate-input input[name="email"]');
-    var phoneno = $('.validate-input input[name="phoneno"]');
-    var e = document.getElementById("courses");
-    var course = e.value;
-
-
-    $('.validate-form').on('submit',function(){
-        var check = true;
-
-        if($(first_name).val().trim() == ''){
-            showValidate(first_name);
-            check=false;
-        }
-
-        if($(last_name).val().trim() == ''){
-            showValidate(last_name);
-            check=false;
-        }
-
-        if($(phoneno).val().trim() == ''){
-            showValidate(phoneno);
-            check=false;
-        }
-
-        if($(email).val().trim().match(/^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{1,5}|[0-9]{1,3})(\]?)$/) == null) {
-            showValidate(email);
-            check=false;
-        }
-
-        return check;
-    });
-
-
-    $('.validate-form .input1').each(function(){
-        $(this).focus(function(){
-           hideValidate(this);
-       });
-    });
-
-    function showValidate(input) {
-        var thisAlert = $(input).parent();
-
-        $(thisAlert).addClass('alert-validate');
+    var selectElement = document.getElementById('apply_degree');
+    var output = selectElement.value;
+    text = selectElement.options[selectElement.selectedIndex].text;
+	
+	if (name == "" || email == "" || phoneno == "" || output == "default") {
+		alert("Kindly ensure all fields are entered before sending application");
+    } else {
+        sendFirstMail();
+        alert("Thank you for your application. You will receive an email shortly");
+        sendNextMail(text);
     }
+}
 
-    function hideValidate(input) {
-        var thisAlert = $(input).parent();
+function sendFirstMail() {
 
-        $(thisAlert).removeClass('alert-validate');
-    }
-})(jQuery);
+    var params = {
+        name: document.getElementById("apply_name").value,
+        email: document.getElementById("apply_email").value,
+    };
+
+  const serviceID = "service_78c4nza";
+  const templateID = "template_2ik2zbb";
+
+    emailjs.send(serviceID, templateID, params)
+        .then(res => {
+            console.log(res);
+        })
+    .catch(err=>console.log(err));
+}
+
+function sendNextMail(text) {
+    var params = {
+        name: document.getElementById("apply_name").value,
+        email: document.getElementById("apply_email").value,
+        phoneno: document.getElementById("apply_no").value,
+        degree: text,
+  };
+
+  const serviceID = "service_78c4nza";
+  const templateID = "template_o1hvzy4";
+
+    emailjs.send(serviceID, templateID, params)
+    .then(res=>{
+        console.log(res);
+    })
+    .catch(err=>console.log(err));
+}

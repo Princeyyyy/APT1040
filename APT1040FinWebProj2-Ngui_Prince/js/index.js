@@ -70,36 +70,39 @@ function validateForm(){
 	var subject = document.getElementById("subject").value;
 	var message = document.getElementById("message").value;
 	
-    if (name == "" || email == "" || subject == "" || message == "") {
-        alert("Kindly ensure all fields are filled before sending message");
+	if (name == "" || email == "" || subject == "" || message == "") {
+		alert("Kindly ensure all fields are filled before sending message");
     } else {
         sendMail();
-    }
+        alert("Thank you for your message. You will receive an email shortly");
+        sendSecondMail();
+	}
 }
 
 function sendMail() {
-  var params = {
-    name: document.getElementById("name").value,
-    email: document.getElementById("email").value,
-    message: document.getElementById("message").value,
-  };
+    var params = {
+        name: document.getElementById("fullname").value,
+        email: document.getElementById("email").value,
+        subject: document.getElementById("subject").value,
+        message: document.getElementById("message").value,
+    };
 
   const serviceID = "service_2rxllsv";
   const templateID = "template_sg2becq";
 
     emailjs.send(serviceID, templateID, params)
-    .then(res=>{
-        sendSecondMail();
-    })
+        .then(res => {
+            console.log(res);
+        })
     .catch(err=>console.log(err));
 }
 
 function sendSecondMail() {
-  var params = {
-    name: document.getElementById("name").value,
-    email: document.getElementById("email").value,
-    subject: document.getElementById("subject").value,
-    message: document.getElementById("message").value,
+    var params = {
+        name: document.getElementById("fullname").value,
+        email: document.getElementById("email").value,
+        subject: document.getElementById("subject").value,
+        message: document.getElementById("message").value,
   };
 
   const serviceID = "service_2rxllsv";
@@ -107,10 +110,6 @@ function sendSecondMail() {
 
     emailjs.send(serviceID, templateID, params)
     .then(res=>{
-        document.getElementById("name").value = "";
-        document.getElementById("email").value = "";
-        document.getElementById("subject").value = "";
-        document.getElementById("message").value = "";
         console.log(res);
     })
     .catch(err=>console.log(err));
